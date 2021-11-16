@@ -1,3 +1,8 @@
+/** A project's coworker's info */
+export type Coworker = {
+    email?: string,
+}
+
 /**
  * A project is a finished work by myself.
  */
@@ -20,10 +25,11 @@ export type Project = {
     /** Any referencing URLs. */
     url: { [key: string]: string },
 
-    /** Any referencing IMGs. */
-    img: { [key: string]: string }
+    /** Any referencing images. */
+    img: { [key: string]: string },
 
-    colab: {}
+    /** Any coworkers that contributes to this project. */
+    coworkers: { [name: string]: Coworker }
 }
 
 /** Project list type.. */
