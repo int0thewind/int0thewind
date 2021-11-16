@@ -5,7 +5,10 @@ const self: Self = {
     pinyin: 'Hanzhi Yin',
     zhCN: '殷瀚之',
   },
-  nickname: ['Hans'],
+  otherNames: {
+    preferredName: 'Hans',
+  },
+  pronouns: 'He/Him/His',
   email: {
     personal: 'yinhanzhi@gmail.com',
     campus: 'hanzhiy@andrew.cmu.edu',

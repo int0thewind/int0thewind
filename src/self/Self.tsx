@@ -10,7 +10,12 @@ type Self = {
   },
 
   /** My nickname. Used for unofficial purposes. */
-  nickname: string[],
+  otherNames: {
+    [key: string]: string,
+  },
+
+  /** My preferred pronouns to reflect my gender. */
+  pronouns: 'He/Him/His' | string,
 
   /** My email addresses. */
   email: {

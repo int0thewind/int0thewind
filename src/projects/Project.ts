@@ -3,6 +3,11 @@ export type Coworker = {
   email?: string,
 };
 
+export type Description = {
+  en: string,
+  [language: string]: string,
+};
+
 /** A project is a finished work by myself. */
 export type Project = {
   /** The name of the project. */
@@ -19,10 +24,10 @@ export type Project = {
   date: string,
 
   /** The short description of the project. */
-  shortDesc?: string,
+  shortDescription?: Description,
 
-  /** The long description of the project. */
-  desc: string,
+  /** The long description of the project in different languages. */
+  description: Description,
 
   /** Any referencing URLs. */
   url: { [key: string]: string },
