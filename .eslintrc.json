@@ -11,7 +11,7 @@
     }]
   },
   "overrides": [{
-      "files": ["pages/_app.tsx"],
+      "files": ["pages/_app.tsx", "pages/_document.tsx"],
       "rules": { "react/jsx-props-no-spreading": "off" }
   }]
 }
