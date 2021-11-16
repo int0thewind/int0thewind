@@ -1,19 +1,17 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "airbnb",
-    "airbnb-typescript"
-  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "overrides": [
-    {
-      "files": ["*"],
-      "rules": {
-        "react/react-in-jsx-scope": "off",
-        "react/function-component-definition": "off" // Need to figure out how this works.
-      }
-    }
-  ]
+  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": ["error", {
+      "namedComponents": "arrow-function",
+      "unnamedComponents": "arrow-function"
+    }]
+  },
+  "overrides": [{
+      "files": ["pages/_app.tsx"],
+      "rules": { "react/jsx-props-no-spreading": "off" }
+  }]
 }
