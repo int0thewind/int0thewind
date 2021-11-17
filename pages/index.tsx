@@ -21,7 +21,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ me }) 
       <title>{`${me.legalName.pinyin} | About Me`}</title>
     </Head>
     <Typography variant="body1" sx={{ whiteSpace: 'pre-line', p: 2 }}>
-      {me.bio.work.replaceAll('\n', '\n\n')}
+      {me.bio.work.split('\n').join('\n\n')}
     </Typography>
     <Divider />
     <Box component="footer" sx={{ display: 'flex', justifyContent: 'center', '*': { m: 1, cursor: 'pointer' } }}>

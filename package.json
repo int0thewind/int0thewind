@@ -9,9 +9,6 @@
     "generate": "cd src/personal && tsc exec.ts && node exec.js && rm *.js",
     "upload:aws": "cd src/personal && aws s3 cp ./ s3://int0thewind/ --recursive --exclude \"*\" --include \"*.json\""
   },
-  "engines": {
-    "node": ">=15"
-  },
   "dependencies": {
     "@emotion/cache": "^11.6.0",
     "@emotion/react": "^11.6.0",
