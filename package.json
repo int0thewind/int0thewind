@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate": "cd src/personal && tsc main.ts && node main.js && rm *.js"
+    "generate": "cd src/personal && tsc exec.ts && node exec.js && rm *.js",
+    "upload:aws": "cd src/personal && aws s3 cp ./ s3://int0thewind/ --recursive --exclude \"*\" --include \"*.json\""
   },
   "dependencies": {
     "@emotion/cache": "^11.6.0",
