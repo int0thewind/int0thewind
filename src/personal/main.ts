@@ -1,6 +1,7 @@
-import Self from './Self';
+import { writeFile } from 'fs';
+import { Me, Projects } from '.';
 
-const self: Self = {
+const me: Me = {
   legalName: {
     pinyin: 'Hanzhi Yin',
     zhCN: '殷瀚之',
@@ -22,10 +23,16 @@ const self: Self = {
     work: 'Hanzhi Yin is a music technology master student at Carnegie Mellon University, '
       + 'affiliated with the School of Music at the College of Fine Arts.\n'
       + 'As a composer and an amateur pianist, his passion is exploring musical creativity in the postmodern era. '
-      + 'He is also highly involved in computer science, particularly interested in web development and machine learning.\n'
+      + 'He is also highly involved in computer science, '
+      + 'particularly interested in web development and machine learning.\n'
       + 'His life-long goal is to use the most advanced technology to promote musical creativity '
       + 'for professionals and commoners.',
   },
 };
 
-console.log(JSON.stringify(self));
+const projects: Projects = [];
+
+(() => {
+  writeFile('me.json', JSON.stringify(me), { flag: 'w+' }, (e) => { if (e) throw e; });
+  writeFile('projects.json', JSON.stringify(projects), { flag: 'w+' }, (e) => { if (e) throw e; });
+})();

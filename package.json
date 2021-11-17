@@ -5,7 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+
+    "generate": "cd src/personal && tsc main.ts && node main.js && rm *.js"
   },
   "dependencies": {
     "@emotion/cache": "^11.6.0",
