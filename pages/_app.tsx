@@ -47,9 +47,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     <CssBaseline />
     <Container fixed maxWidth="md" sx={{ p: 4 }}>
       <Header />
-      <Container sx={{ p: 2 }}>
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
     </Container>
   </ThemeProvider>
 );

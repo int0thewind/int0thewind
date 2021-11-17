@@ -15,8 +15,8 @@ const me: Me = {
     campus: 'hanzhiy@andrew.cmu.edu',
   },
   socialMedia: {
-    github: 'https://https://github.com/int0thewind',
-    linkedin: 'https://https://www.linkedin.com/in/hanzhi-yin-5b30a2189/',
+    github: 'https://github.com/int0thewind',
+    linkedin: 'https://www.linkedin.com/in/hanzhi-yin-5b30a2189/',
     twitter: 'https://twitter.com/int0thewind',
   },
   bio: {
