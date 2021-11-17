@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 const Works: NextPage = () => (
   <Typography>
-    Work page works!
+    Contents will be placed soon!
   </Typography>
 );
 
