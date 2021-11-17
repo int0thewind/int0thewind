@@ -112,7 +112,7 @@ export const fetchMe = async () => {
 };
 
 /** The AWS S3 link to my personal curriculum vitae. */
-export const cvLink = '';
+export const cvLink = 'https://int0thewind.s3.us-east-2.amazonaws.com/cv.pdf';
 
 /** The AWS S3 link to my personal avatar. */
 export const avatarLink = '';

@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,9 +7,6 @@ import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Me, fetchMe } from '../src/personal';
-
-const GitHubIcon = forwardRef(() => <FontAwesomeIcon icon={faGithub} size="2x" />);
-const LinkedInIcon = forwardRef(() => <FontAwesomeIcon icon={faLinkedin} size="2x" />);
 
 type HomePageProps = { me: Me };
 
@@ -29,11 +25,12 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ me }) 
     </Typography>
     <Divider />
     <Box component="footer" sx={{ display: 'flex', justifyContent: 'center', '*': { m: 1, cursor: 'pointer' } }}>
+      {/* FIXME: forwardRef fails, but the routing works. */}
       <Link href={me.socialMedia.github} passHref>
-        <GitHubIcon />
+        <FontAwesomeIcon icon={faGithub} size="2x" />
       </Link>
       <Link href={me.socialMedia.linkedin} passHref>
-        <LinkedInIcon />
+        <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </Link>
     </Box>
     <Divider />
