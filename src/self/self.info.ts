@@ -27,3 +27,5 @@ const self: Self = {
       + 'for professionals and commoners.',
   },
 };
+
+console.log(JSON.stringify(self));

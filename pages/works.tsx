@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Typography from '@mui/material/Typography';
 
-const Home: NextPage = () => (
+const Works: NextPage = () => (
   <Typography>
-    Homepage works!
+    Work page works!
   </Typography>
 );
 
-export default Home;
+export default Works;
