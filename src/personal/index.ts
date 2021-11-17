@@ -71,7 +71,7 @@ export type Project = {
   /**
    * The kind of a project.
    * Could be one of or multiple of
-   * notational composition, electroacoustic composition,software, or machine learning project.
+   * notational composition, electroacoustic composition, software, or machine learning project.
    */
   kinds: string[],
 
@@ -94,5 +94,17 @@ export type Project = {
   coworkers: { [name: string]: Coworker }
 };
 
-/** Project list type.. */
+/** Project list type. */
 export type Projects = Project[];
+
+/** The AWS S3 link to my personal projects JSON file. */
+export const projectsJsonLink = 'https://int0thewind.s3.us-east-2.amazonaws.com/projects.json';
+
+/** The AWS S3 link to my personal info JSON file. */
+export const meJsonLink = 'https://int0thewind.s3.us-east-2.amazonaws.com/me.json';
+
+/** The AWS S3 link to my personal curriculum vitae. */
+export const cvLink = '';
+
+/** The AWS S3 link to my personal avatar. */
+export const avatarLink = '';
