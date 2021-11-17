@@ -8,7 +8,8 @@
     "react/function-component-definition": ["error", {
       "namedComponents": "arrow-function",
       "unnamedComponents": "arrow-function"
-    }]
+    }],
+    "react/prop-types": "off" // Temporarily disable this, as Next.js and TS complicates type check.
   },
   "overrides": [{
       "files": ["pages/_app.tsx", "pages/_document.tsx"],

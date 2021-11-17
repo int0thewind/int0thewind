@@ -12,14 +12,14 @@ import theme from '../src/theme';
 
 /** All items in the navigation bar. */
 const navigationItems = {
-  Bio: { link: '/' },
+  'About Me': { link: '/' },
   Works: { link: '/works' },
   CV: { link: '/' },
 };
 
 /** The navigation bar to be displayed on the top of the webpage. */
 const Header: FC = () => (
-  <Box sx={{ position: 'sticky', top: 0 }}>
+  <Box component="header">
     <Typography variant="h1" align="center" gutterBottom>
       Hanzhi Yin
     </Typography>
@@ -47,7 +47,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     <CssBaseline />
     <Container fixed maxWidth="md" sx={{ p: 4 }}>
       <Header />
-      <Component {...pageProps} />
+      <Container sx={{ p: 2 }}>
+        <Component {...pageProps} />
+      </Container>
     </Container>
   </ThemeProvider>
 );

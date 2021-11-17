@@ -49,7 +49,7 @@ export type Me = {
 };
 
 /** A project's coworker's info */
-export type Coworker = {
+type Coworker = {
   displayName: {
     en: string,
     [language: string]: string,
@@ -58,13 +58,13 @@ export type Coworker = {
 };
 
 /** A multi-language description for an item. */
-export type Description = {
+type Description = {
   en: string,
   [language: string]: string,
 };
 
 /** A project is a finished work by myself. */
-export type Project = {
+type Project = {
   /** The name of the project. */
   name: string,
 
@@ -97,11 +97,19 @@ export type Project = {
 /** Project list type. */
 export type Projects = Project[];
 
-/** The AWS S3 link to my personal projects JSON file. */
-export const projectsJsonLink = 'https://int0thewind.s3.us-east-2.amazonaws.com/projects.json';
+/** Fetch projects from AWS S3 server. */
+export const fetchProjects = async () => {
+  const res = await fetch('https://int0thewind.s3.us-east-2.amazonaws.com/projects.json');
+  const data: Projects = await res.json();
+  return data;
+};
 
-/** The AWS S3 link to my personal info JSON file. */
-export const meJsonLink = 'https://int0thewind.s3.us-east-2.amazonaws.com/me.json';
+/** Fetch the info about me from AWS S3 server. */
+export const fetchMe = async () => {
+  const res = await fetch('https://int0thewind.s3.us-east-2.amazonaws.com/me.json');
+  const data: Me = await res.json();
+  return data;
+};
 
 /** The AWS S3 link to my personal curriculum vitae. */
 export const cvLink = '';
