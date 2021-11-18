@@ -1,5 +1,9 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Typography from '@mui/material/Typography';
 import {
   Me, Projects, fetchMe, fetchProjects,
@@ -21,9 +25,16 @@ const Works: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ me, p
     <Head>
       <title>{`${me.legalName.pinyin} | Works`}</title>
     </Head>
-    <Typography>
-      Contents will be placed soon!
-    </Typography>
+    {projects.map((project) => (
+      <Accordion key={project.name}>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography>{project.name}</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          {project.description.en}
+        </AccordionDetails>
+      </Accordion>
+    ))}
   </>
 );
 
