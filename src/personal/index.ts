@@ -109,7 +109,7 @@ export type Projects = Project[];
 export const fetchProjects = async () => {
   const res = await fetch('https://int0thewind.s3.us-east-2.amazonaws.com/projects.json');
   const data: Projects = await res.json();
-  return data;
+  return data.sort((a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1));
 };
 
 /** Fetch the info about me from AWS S3 server. */
