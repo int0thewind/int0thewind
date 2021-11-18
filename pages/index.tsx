@@ -12,7 +12,7 @@ type HomePageProps = { me: Me };
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   const me = await fetchMe();
-  return { props: { me } };
+  return { props: { me }, revalidate: 10 };
 };
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ me }) => (
