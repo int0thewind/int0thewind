@@ -14,6 +14,7 @@ const headerItems: HeaderItems = {
 
 const Header = () => (
   <header>
+    <h1>Hanzhi Yin</h1>
     <Divider />
     <div className="flex flex-nowrap flex-row justify-evenly">
       {Object.entries(headerItems).map(([displayName, { link }]) => (

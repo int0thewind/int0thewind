@@ -1,13 +1,13 @@
 import type { AppProps } from 'next/app';
 import Header from '../components/Header';
-import Container from '../components/ui-components/Container';
+import ContentContainer from '../components/ui-components/ContentContainer';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Container>
+  <ContentContainer>
     <Header />
     <Component {...pageProps} />
-  </Container>
+  </ContentContainer>
 );
 
 export default MyApp;
