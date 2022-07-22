@@ -1,18 +1,3 @@
 {
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript"],
-  "rules": {
-    "react/react-in-jsx-scope": "off",
-    "react/function-component-definition": ["error", {
-      "namedComponents": "arrow-function",
-      "unnamedComponents": "arrow-function"
-    }],
-    "react/prop-types": "off" // Temporarily disable this, as Next.js and TS complicates type check.
-  },
-  "overrides": [{
-      "files": ["pages/_app.tsx", "pages/_document.tsx"],
-      "rules": { "react/jsx-props-no-spreading": "off" }
-  }]
+  "extends": "next/core-web-vitals"
 }
