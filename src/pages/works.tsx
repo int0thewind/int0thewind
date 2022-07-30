@@ -1,3 +1,1 @@
-const Works = () => <p>Works page works!</p>;
-
-export default Works;
+export default () => <p>Works page works!</p>;
