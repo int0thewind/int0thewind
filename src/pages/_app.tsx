@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ContentContainer from '../components/ui-components/ContentContainer';
 import '../styles/globals.css';
@@ -9,6 +10,7 @@ export default ({ Component, pageProps }: AppProps) => (
     <ContentContainer>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </ContentContainer>
   </ThemeProvider>
 );
