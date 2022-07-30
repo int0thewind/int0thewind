@@ -4,6 +4,11 @@ const colors = require('tailwindcss/colors');
 const typography = require('@tailwindcss/typography');
 
 module.exports = {
+  /* next-theme append the 'data-theme' attribute to the html element.
+   * Both 'class' and '[data-theme="dark"]' should be passed in
+   * to allow tailwindcss dark mode to work.
+   */
+  darkMode: ['class', '[data-theme="dark"]'],
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {

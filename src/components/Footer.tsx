@@ -1,10 +1,11 @@
 import ThemeSwitch from './ThemeSwitch';
+import Divider from './ui-components/Divider';
 
 const Footer = () => {
   return (
     <footer>
-      <hr />
-      <div className="flex">
+      <Divider />
+      <div className="flex justify-between">
         <ThemeSwitch />
       </div>
     </footer>
